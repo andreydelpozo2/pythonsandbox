@@ -7,7 +7,7 @@ pan = np.array(Image.open('panorama.jpg'))
 w = pan.shape[1]
 h = pan.shape[0]
 
-cir = np.zeros((h,h,3))
+cir = np.zeros((2*h,2*h,3))
 
 def car2cir(x,y):
 	theta = math.atan2(y,x)
