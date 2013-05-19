@@ -19,13 +19,15 @@ def cir2car(theta,r):
 	y = r*math.sin(theta)
 	return (x,y)
 
-def cir2Pan(theta,r,panSize):
+def cir2Pan(theta,r,panSize,flip=True):
 	if r > panSize[1]:
 		return None
-	y = r
+	if flip:
+		y = panSize[1]-r-1
+	else:
+		y = r
 	x = panSize[0]*theta/(2*math.pi)
 	return (x,y)
-
 
 for cc in range(3):
 	a = pan[:,:,cc]
