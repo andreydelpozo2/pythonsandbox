@@ -33,7 +33,7 @@ for cc in range(3):
 	#rows
 	for i in xrange(b.shape[0]):
 		for j in xrange(b.shape[1]):
-			dstCir = car2cir(i,j)
+			dstCir = car2cir(i-b.shape[0]/2,j-b.shape[1]/2)
 			srcCar = cir2Pan(dstCir[0],dstCir[1],[a.shape[1],a.shape[0]])
 			if srcCar == None:
 				continue
